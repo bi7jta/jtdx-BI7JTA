@@ -21,3 +21,45 @@ http://www.jtdx.tech
 Project mailing  list:
 
 https://jtdx.groups.io/g/main
+
+## CMake build exe in Visual Studio 2019
+
+```
+1> 已为默认配置“x64-Debug”启动 CMake 生成。
+1> 命令行: "C:\WINDOWS\system32\cmd.exe" /c "%SYSTEMROOT%\System32\chcp.com 65001 >NUL && "c:\program files (x86)\microsoft visual studio\2019\community\common7\ide\commonextensions\microsoft\cmake\CMake\bin\cmake.exe"  -G "Ninja"  -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="C:\WORK_JTDX\jtdx-vs2019\out\install\x64-Debug" -DCMAKE_C_COMPILER:FILEPATH="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe" -DCMAKE_CXX_COMPILER:FILEPATH="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe"  -DCMAKE_MAKE_PROGRAM="c:\program files (x86)\microsoft visual studio\2019\community\common7\ide\commonextensions\microsoft\cmake\Ninja\ninja.exe" "C:\WORK_JTDX\jtdx-vs2019" 2>&1"
+1> 工作目录: C:\WORK_JTDX\jtdx-vs2019\out\build\x64-Debug
+1> [CMake] -- The C compiler identification is MSVC 19.29.30140.0
+1> [CMake] -- The CXX compiler identification is MSVC 19.29.30140.0
+1> [CMake] -- The Fortran compiler identification is IntelLLVM 2023.0.0 with MSVC-like command-line
+1> [CMake] -- Detecting C compiler ABI info
+1> [CMake] -- Detecting C compiler ABI info - done
+1> [CMake] -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe - skipped
+1> [CMake] -- Detecting C compile features
+1> [CMake] -- Detecting C compile features - done
+1> [CMake] -- Detecting CXX compiler ABI info
+1> [CMake] -- Detecting CXX compiler ABI info - done
+1> [CMake] -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe - skipped
+1> [CMake] -- Detecting CXX compile features
+1> [CMake] -- Detecting CXX compile features - done
+1> [CMake] -- Detecting Fortran compiler ABI info
+1> [CMake] -- Detecting Fortran compiler ABI info - done
+1> [CMake] -- Check for working Fortran compiler: C:/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/bin/ifx.exe - skipped
+1> [CMake] -- Checking whether C:/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/bin/ifx.exe supports Fortran 90
+1> [CMake] -- Checking whether C:/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/bin/ifx.exe supports Fortran 90 - yes
+1> [CMake] -- Building jtdx-2.2.159
+1> [CMake] -- ******************************************************
+1> [CMake] -- Building for for: Windows-AMD64
+1> [CMake] -- ******************************************************
+1> [CMake] CMake Error at C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+1> [CMake]   Could NOT find Boost (missing: Boost_INCLUDE_DIR) (Required is at least
+1> [CMake]   version "1.63")
+1> [CMake] Call Stack (most recent call first):
+1> [CMake]   C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
+1> [CMake]   C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/FindBoost.cmake:2344 (find_package_handle_standard_args)
+1> [CMake]   CMakeLists.txt:730 (find_package)
+1> [CMake] -- Configuring incomplete, errors occurred!
+1> [CMake] See also "C:/WORK_JTDX/jtdx-vs2019/out/build/x64-Debug/CMakeFiles/CMakeOutput.log".
+1> [CMake] See also "C:/WORK_JTDX/jtdx-vs2019/out/build/x64-Debug/CMakeFiles/CMakeError.log".
+1> “C:\WINDOWS\system32\cmd.exe”“/c "%SYSTEMROOT%\System32\chcp.com 65001 >NUL && "c:\program files (x86)\microsoft visual studio\2019\community\common7\ide\commonextensions\microsoft\cmake\CMake\bin\cmake.exe"  -G "Ninja"  -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="C:\WORK_JTDX\jtdx-vs2019\out\install\x64-Debug" -DCMAKE_C_COMPILER:FILEPATH="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe" -DCMAKE_CXX_COMPILER:FILEPATH="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe"  -DCMAKE_MAKE_PROGRAM="c:\program files (x86)\microsoft visual studio\2019\community\common7\ide\commonextensions\microsoft\cmake\Ninja\ninja.exe" "C:\WORK_JTDX\jtdx-vs2019" 2>&1"”执行失败，出现错误:““C:\WINDOWS\system32\cmd.exe”“/c "%SYSTEMROOT%\System32\chcp.com 65001 >NUL && "c:\program files (x86)\microsoft visual studio\2019\community\common7\ide\commonextensions\microsoft\cmake\CMake\bin\cmake.exe"  -G "Ninja"  -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="C:\WORK_JTDX\jtdx-vs2019\out\install\x64-Debug" -DCMAKE_C_COMPILER:FILEPATH="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe" -DCMAKE_CXX_COMPILER:FILEPATH="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe"  -DCMAKE_MAKE_PROGRAM="c:\program files (x86)\microsoft visual studio\2019\community\common7\ide\commonextensions\microsoft\cmake\Ninja\ninja.exe" "C:\WORK_JTDX\jtdx-vs2019" 2>&1"”已返回，并带有退出代码: 1”。
+
+```
